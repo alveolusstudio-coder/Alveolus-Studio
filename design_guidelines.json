@@ -1,0 +1,176 @@
+{
+  "project_name": "ALVEOLUS.STUDIO - Ultra-Premium Cinematic 3D Website",
+  "app_type": "3d_experience / cinematic_landing_page",
+  "theme": "Deep Dark / Tactical Cinematic",
+  "target_audience": "Indonesian brands, event planners, couples, property developers, tourism boards, and creators looking for elite aerial visual production.",
+  "copywriting_language": "Mixed English + Bahasa Indonesia (English for cinematic headlines, technical terms, and brand statements; Bahasa Indonesia for rental packages, pricing, booking form, CTAs, and service details)",
+  "whatsapp_number": "085702253873",
+
+  "colors": {
+    "background": "#050505",
+    "background_secondary": "#0D0F0E",
+    "surface": "#121614",
+    "surface_glass": "rgba(18, 22, 20, 0.65)",
+    "border_subtle": "rgba(114, 240, 168, 0.15)",
+    "border_bright": "rgba(114, 240, 168, 0.4)",
+    "primary_accent": "#72F0A8",
+    "primary_accent_glow": "rgba(114, 240, 168, 0.35)",
+    "secondary_gold": "#D7B56D",
+    "text_primary": "#F5F5F5",
+    "text_secondary": "#8A998E",
+    "text_muted": "#556358",
+    "status_online": "#72F0A8",
+    "forbidden_colors": ["#7351B7", "#1B93A4"]
+  },
+
+  "typography": {
+    "font_family_heading": "Syne, Plus Jakarta Sans, sans-serif",
+    "font_family_body": "DM Sans, sans-serif",
+    "font_family_mono": "JetBrains Mono, monospace",
+    "forbidden_fonts": ["Inter", "Roboto", "Space Grotesk"],
+    "heading_h1": "text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight uppercase leading-none",
+    "heading_h2": "text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight uppercase",
+    "heading_h3": "text-xl sm:text-2xl font-semibold tracking-normal",
+    "hud_label": "font-mono text-xs uppercase tracking-[0.2em] text-[#72F0A8]",
+    "body_text": "text-sm sm:text-base text-[#8A998E] leading-relaxed",
+    "caption_text": "text-xs text-[#556358] font-mono"
+  },
+
+  "3d_strategy": {
+    "engine": "React Three Fiber (@react-three/fiber) + Drei (@react-three/drei)",
+    "approach": "Procedural stylized Three.js geometry for DJI Mini 3 (No external GLB model required). Includes quadcopter frame, 4 rotatable prop arms, animated spinning rotor blades, 3-axis camera gimbal with glass lens, glowing front/rear LED indicators, and subtle altitude float/tilt dynamics.",
+    "lighting": "Volumetric sunlight directional light (#D7B56D) + cool fill ambient light (#101412) + point light accent (#72F0A8) mounted on drone belly.",
+    "background_scene": "Layered particle altitude fog, low-poly mountain terrain contour wireframes, and warm golden hour gradient sky dome."
+  },
+
+  "image_urls": {
+    "hero_landscape": "https://images.unsplash.com/photo-1687226012369-36ec24bec4c4?crop=entropy&cs=srgb&fm=jpg&q=85",
+    "volcano_sunrise": "https://images.unsplash.com/photo-1705905272120-70576178b4d3?crop=entropy&cs=srgb&fm=jpg&q=85",
+    "rice_terraces": "https://images.unsplash.com/photo-1559628233-eb1b1a45564b?crop=entropy&cs=srgb&fm=jpg&q=85",
+    "tropical_coastline": "https://images.pexels.com/photos/6209728/pexels-photo-6209728.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "luxury_villa": "https://images.unsplash.com/photo-1627616010739-78ee1aacf431?crop=entropy&cs=srgb&fm=jpg&q=85",
+    "wedding_couple": "https://images.unsplash.com/photo-1562826772-be179f321470?crop=entropy&cs=srgb&fm=jpg&q=85",
+    "hiker_mountain": "https://images.unsplash.com/photo-1699302150582-bffc5309a8c8?crop=entropy&cs=srgb&fm=jpg&q=85",
+    "ocean_cliff": "https://images.pexels.com/photos/15663631/pexels-photo-15663631.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+  },
+
+  "image_urls_extra": {
+    "aerial_volcano_ridge": "https://images.unsplash.com/photo-1783427091805-c6cc3baacf2d?crop=entropy&cs=srgb&fm=jpg&q=85",
+    "aerial_coastline_cliffs": "https://images.unsplash.com/photo-1506472634167-c6776cd44d07?crop=entropy&cs=srgb&fm=jpg&q=85",
+    "aerial_rice_terraces": "https://images.unsplash.com/photo-1556490496-45afc7b8b8e5?crop=entropy&cs=srgb&fm=jpg&q=85",
+    "cinematic_city_dusk": "https://images.unsplash.com/photo-1782811559906-f2b99e515c72?crop=entropy&cs=srgb&fm=jpg&q=85",
+    "misty_jungle_canopy": "https://images.unsplash.com/photo-1697350978674-4b40261b0dc3?crop=entropy&cs=srgb&fm=jpg&q=85",
+    "luxury_villa_pool_topdown": "https://images.unsplash.com/photo-1562778612-e1e0cda9915c?crop=entropy&cs=srgb&fm=jpg&q=85",
+    "prewedding_couple_outdoor": "https://images.unsplash.com/photo-1692716039986-8bdfb063574a?crop=entropy&cs=srgb&fm=jpg&q=85",
+    "concert_crowd_night": "https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?crop=entropy&cs=srgb&fm=jpg&q=85",
+    "content_creator_filming": "https://images.unsplash.com/photo-1630797160666-38e8c5ba44c1?crop=entropy&cs=srgb&fm=jpg&q=85",
+    "food_product_flatlay": "https://images.unsplash.com/photo-1690983322070-22861e13ce47?crop=entropy&cs=srgb&fm=jpg&q=85"
+  },
+
+  "section_roadmap": [
+    {
+      "id": "01-boot-sequence",
+      "name": "Cinematic Boot Sequence Opening",
+      "type": "Interactive Intro / Loader",
+      "description": "Full dark overlay with glowing green HUD indicator dot. Displays ALVEOLUS.STUDIO boot logs line by line: INITIALIZING SYSTEM... / CAMERA 4K ONLINE / 3-AXIS GIMBAL BALANCED / GPS LOCKED / READY TO FLY. Drone silhouette reveals with sound-wave effect and smooth fly-to-camera zoom, fading into hero."
+    },
+    {
+      "id": "02-hero-3d",
+      "name": "3D Canvas Hero Section",
+      "type": "Interactive 3D Stage",
+      "description": "3D procedural DJI Mini 3 floats interactively following mouse parallax over Indonesian volcano/fog landscape. Headline: TERBANG. ABADIKAN. CERITAKAN. + 'See the world differently.' Subhead. Spec chips: [DJI MINI 3] [4K HDR] [3-AXIS GIMBAL] [249g LIGHTWEIGHT]. Primary CTA: 'Lihat Paket Sewa' + 'Booking Drone'."
+    },
+    {
+      "id": "03-lens-portal",
+      "name": "Scroll-To-Fly Movie Ending Transition",
+      "type": "ScrollTrigger Portal",
+      "description": "As user scrolls, drone flies closer to camera lens, triggering an aperture camera lens portal zoom effect with quote: 'FROM HERE, EVERYTHING LOOKS DIFFERENT.'"
+    },
+    {
+      "id": "04-product-hotspots",
+      "name": "Interactive Hotspot Product Showcase",
+      "type": "Interactive Feature Matrix",
+      "description": "Title: 'Small Drone. Big Perspective.' Rotating 3D camera view with 4 clickable glass hotspots: 1. 4K HDR Video (f/1.7 aperture, True Vertical Shooting), 2. 3-Axis Mechanical Gimbal (Smooth cinematic motion), 3. < 249g Ultra-Lightweight (No heavy permits needed), 4. Aerial Perspective (38-min battery life)."
+    },
+    {
+      "id": "05-mission-selector",
+      "name": "Mission Selector: WHAT ARE WE CAPTURING?",
+      "type": "Interactive Bento Grid",
+      "description": "8 high-impact cards with image overlays and hover tilt: Wedding, Prewedding, Event & Concert, Tourism & Destination, Property & Luxury Villa, Outdoor Hiking, UMKM & Commercial, Social Media Reels/TikTok."
+    },
+    {
+      "id": "06-paket-sewa",
+      "name": "Paket Sewa (Pricing Tier)",
+      "type": "3D Glass Card Matrix",
+      "description": "3 premium glass cards in Bahasa Indonesia: 1. BASIC (Drone Only) Mulai Rp350.000/hari - Unit DJI Mini 3, 2 Batteries, Controller, SD Card. 2. CINEMATIC (Drone + Editing) Mulai Rp500.000/hari [BADGE: PALING POPULER] - Pilot Drone + 1 Min Edited Reel + 4K Raw Footages. 3. PREMIUM (Full Experience) Mulai Rp600.000/hari - Pilot + Director + 3x Edited Video + Photos + Color Graded."
+    },
+    {
+      "id": "07-flight-path",
+      "name": "Flight Path Process: Dari Ide Menjadi Visual",
+      "type": "Interactive Timeline",
+      "description": "Glowing HUD vector line connecting 4 workflow stages: 1. RENCANA (Konsultasi konsep & lokasi), 2. TERBANG (Eksekusi flight plan & pilot profesional), 3. ABADIKAN (Pengambilan 4K video & aerial photo), 4. CERITAKAN (Color grading & penyerahan video final)."
+    },
+    {
+      "id": "08-portfolio",
+      "name": "Horizontal Portfolio: Captured From Above",
+      "type": "Horizontal Scroll Gallery",
+      "description": "Filterable cinematic showcase by categories (ALL, AERIAL, CINEMATIC, PROPERTY, EVENT, TOURISM). Each item shows thumbnail, location tag (e.g. Mount Batur, Uluwatu Cliff, Canggu Villa), camera metadata (4K 60FPS, ISO 100), and lightbox modal trigger."
+    },
+    {
+      "id": "09-typographic-interlude",
+      "name": "Typographic Interlude",
+      "type": "Cinematic Statement",
+      "description": "Massive high-contrast statement: 'YOU'RE NOT RENTING A DRONE. YOU'RE RENTING A DIFFERENT PERSPECTIVE.' Bahasa translation: 'Anda tidak sekadar menyewa drone. Anda menyewa sudut pandang baru.' 3D drone slowly emerges from pitch-black fog behind text."
+    },
+    {
+      "id": "10-booking-form",
+      "name": "WhatsApp Booking Engine: Siap Terbang Bersama Kami?",
+      "type": "Interactive Glass Form + 3D Sync",
+      "description": "Glassmorphism form fields: Nama Lengkap, Nomor WhatsApp, Tanggal Sewa, Lokasi Shooting, Pilih Paket (Basic/Cinematic/Premium), Jenis Kebutuhan, Catatan. Generates instant pre-filled WhatsApp message sent to 085702253873 and submits lead data to MongoDB API POST `/api/bookings`. 3D drone adjacent to form changes light pulse based on chosen package!"
+    },
+    {
+      "id": "11-why-alveolus",
+      "name": "Why Alveolus Studio",
+      "type": "Feature Grid",
+      "description": "4 tactical cards: 1. Certified Pilot & Safety First, 2. Backup Battery & 4K Raw Backup, 3. Fast Delivery (24-48 jam edit), 4. Transparent Pricing No Hidden Fees."
+    },
+    {
+      "id": "12-final-flight",
+      "name": "Final Flight Footer",
+      "type": "Full-screen Call To Action",
+      "description": "Drone flies away up into wide sunrise sky dome. Statement: 'THE WORLD IS BIGGER FROM UP HERE.' ALVEOLUS.STUDIO SVG Logo + Quick Links + Direct WhatsApp Button + Copyright 2026."
+    },
+    {
+      "id": "13-navigation",
+      "name": "Floating Tactical Navigation",
+      "type": "Floating Glass HUD Bar",
+      "description": "Top floating nav bar with glassmorphism (backdrop-blur-xl bg-black/60), ALVEOLUS.STUDIO logo with green active radar indicator dot, links (Paket Sewa, Portfolio, Process, Booking), audio mute/unmute toggle, and 'Sewa Sekarang' magnetic button."
+    }
+  ],
+
+  "ui_micro_interactions": {
+    "custom_cursor": "Custom cursor following mouse with smooth lag. States: Default (tiny green dot), Hover link/button (ring expands with label 'EXPLORE' or 'SELECT'), Drag slider ('DRAG').",
+    "magnetic_buttons": "CTA buttons attract cursor position within 30px distance.",
+    "tilt_effects": "Cards tilt on mousemove with 3D shadow shift.",
+    "marquee": "Slow editorial text marquee with low contrast running text: 'ALVEOLUS.STUDIO // SEE THE WORLD DIFFERENTLY // DRONE RENTAL & VISUAL PRODUCTION // BALI & JAVA //'."
+  },
+
+  "testing_and_accessibility": {
+    "data_testid_requirement": "All buttons, inputs, links, package cards, filter tabs, and modal triggers MUST contain explicit data-testid attributes (e.g. data-testid='nav-booking-btn', data-testid='package-card-cinematic', data-testid='booking-submit-btn').",
+    "reduced_motion": "Detect prefers-reduced-motion and gracefully replace 3D camera pan with elegant static WebGL preview and crisp CSS fade transitions."
+  },
+
+  "backend_integration": {
+    "mongodb_route": "POST /api/bookings",
+    "payload": {
+      "name": "string",
+      "phone": "string",
+      "date": "string",
+      "location": "string",
+      "package": "string",
+      "category": "string",
+      "notes": "string",
+      "createdAt": "timestamp"
+    }
+  }
+}

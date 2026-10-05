@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@500;600;700;800&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --background: 0 0% 2%;
+        --foreground: 0 0% 96%;
+        --card: 150 8% 6%;
+        --card-foreground: 0 0% 96%;
+        --popover: 150 8% 6%;
+        --popover-foreground: 0 0% 96%;
+        --primary: 145 82% 69%;
+        --primary-foreground: 0 0% 2%;
+        --secondary: 150 6% 10%;
+        --secondary-foreground: 0 0% 96%;
+        --muted: 150 6% 10%;
+        --muted-foreground: 140 8% 57%;
+        --accent: 145 82% 69%;
+        --accent-foreground: 0 0% 2%;
+        --destructive: 0 84.2% 60.2%;
+        --destructive-foreground: 0 0% 98%;
+        --border: 145 30% 90% / 0.1;
+        --input: 150 6% 14%;
+        --ring: 145 82% 69%;
+        --radius: 0.75rem;
+    }
+}
+
+@layer base {
+    * {
+        @apply border-border;
+    }
+    html {
+        scroll-behavior: auto;
+    }
+    body {
+        @apply bg-alv-ink text-alv-snow font-body;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        overflow-x: hidden;
+    }
+    ::selection {
+        background: #72F0A8;
+        color: #050505;
+    }
+    ::-webkit-scrollbar {
+        width: 6px;
+    }
+    ::-webkit-scrollbar-track {
+        background: #050505;
+    }
+    ::-webkit-scrollbar-thumb {
+        background: #2a332c;
+        border-radius: 3px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+        background: #72F0A8;
+    }
+    @media (pointer: fine) {
+        body.custom-cursor-active,
+        body.custom-cursor-active a,
+        body.custom-cursor-active button,
+        body.custom-cursor-active input,
+        body.custom-cursor-active select,
+        body.custom-cursor-active textarea,
+        body.custom-cursor-active label {
+            cursor: none;
+        }
+    }
+}
+
+/* Lenis smooth scroll */
+html.lenis, html.lenis body { height: auto; }
+.lenis.lenis-smooth { scroll-behavior: auto !important; }
+.lenis.lenis-smooth [data-lenis-prevent] { overscroll-behavior: contain; }
+.lenis.lenis-stopped { overflow: hidden; }
+
+@layer components {
+    .hud-label {
+        @apply font-mono text-[10px] sm:text-xs uppercase tracking-[0.25em] text-alv-green;
+    }
+    .glass {
+        background: rgba(18, 22, 20, 0.55);
+        backdrop-filter: blur(18px);
+        -webkit-backdrop-filter: blur(18px);
+        border: 1px solid rgba(114, 240, 168, 0.12);
+    }
+    .text-outline {
+        -webkit-text-stroke: 1px rgba(245, 245, 245, 0.55);
+        color: transparent;
+    }
+    .text-outline-green {
+        -webkit-text-stroke: 1px rgba(114, 240, 168, 0.7);
+        color: transparent;
+    }
+    .section-pad {
+        @apply px-6 sm:px-10 lg:px-20;
+    }
+}
+
+/* Film grain */
+.grain-overlay {
+    position: fixed;
+    inset: -50%;
+    width: 200%;
+    height: 200%;
+    pointer-events: none;
+    z-index: 80;
+    opacity: 0.05;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 300 300' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    animation: grain-shift 0.9s steps(4) infinite;
+}
+@keyframes grain-shift {
+    0% { transform: translate(0, 0); }
+    25% { transform: translate(-2%, 3%); }
+    50% { transform: translate(3%, -2%); }
+    75% { transform: translate(-3%, -3%); }
+    100% { transform: translate(2%, 2%); }
+}
+
+/* Editorial marquee */
+.marquee {
+    overflow: hidden;
+    white-space: nowrap;
+    user-select: none;
+}
+.marquee-track {
+    display: inline-flex;
+    animation: marquee-scroll 46s linear infinite;
+    will-change: transform;
+}
+.marquee-track > span {
+    display: inline-block;
+    padding-right: 3rem;
+}
+@keyframes marquee-scroll {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+}
+
+/* Hotspot pulse */
+.hotspot-dot::before {
+    content: '';
+    position: absolute;
+    inset: -8px;
+    border-radius: 9999px;
+    border: 1px solid rgba(114, 240, 168, 0.5);
+    animation: hotspot-ping 2.2s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+@keyframes hotspot-ping {
+    0% { transform: scale(0.6); opacity: 1; }
+    80%, 100% { transform: scale(1.9); opacity: 0; }
+}
+
+/* Scroll cue line */
+.scroll-cue::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 1px;
+    height: 100%;
+    background: linear-gradient(to bottom, transparent, #72F0A8, transparent);
+    animation: cue-drop 2.4s ease-in-out infinite;
+}
+@keyframes cue-drop {
+    0% { transform: translateY(-100%); }
+    60%, 100% { transform: translateY(100%); }
+}
+
+/* Drone silhouette drift for final flight */
+@keyframes led-blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.15; }
+}
+.led-blink { animation: led-blink 1.4s ease-in-out infinite; }
+
+@layer base {
+    [data-debug-wrapper="true"] {
+        display: contents !important;
+    }
+}
